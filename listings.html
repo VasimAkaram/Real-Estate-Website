@@ -9,9 +9,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation (same as index.html) -->
+    <!-- Navigation -->
     <nav class="navbar">
-        <!-- Copy from index.html -->
+        <div class="container">
+            <a href="index.html" class="logo">Prime<span>Homes</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="listings.html" class="active">Listings</a>
+                <a href="#">Agents</a>
+                <a href="#">About</a>
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+            <button class="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </nav>
 
     <!-- Listings Header -->
@@ -24,37 +37,35 @@
         </div>
     </section>
 
-    <!-- Listings Filters -->
-    <section class="listings-filters">
+    <!-- Search Bar Section -->
+    <section class="search-bar-section">
         <div class="container">
-            <div class="filter-options">
-                <select>
-                    <option value="">All Types</option>
-                    <option value="house">House</option>
-                    <option value="apartment">Apartment</option>
-                    <option value="condo">Condo</option>
-                </select>
-                <select>
-                    <option value="">All Locations</option>
-                    <option value="ny">New York</option>
-                    <option value="la">Los Angeles</option>
-                    <option value="ch">Chicago</option>
-                </select>
-                <select>
-                    <option value="">Any Price</option>
-                    <option value="100k">Under $100k</option>
-                    <option value="200k">$100k - $200k</option>
-                    <option value="300k">$200k - $300k</option>
-                </select>
-                <button class="btn btn-primary">Filter</button>
-            </div>
-            <div class="sort-options">
-                <span>Sort by:</span>
-                <select>
-                    <option value="newest">Newest</option>
-                    <option value="price-low">Price (Low to High)</option>
-                    <option value="price-high">Price (High to Low)</option>
-                </select>
+            <div class="search-bar">
+                <div class="search-tabs">
+                    <button class="active" data-purpose="buy">Buy</button>
+                    <button data-purpose="rent">Rent</button>
+                    <button data-purpose="commercial">Commercial</button>
+                </div>
+                <form class="search-fields">
+                    <input type="text" name="location" placeholder="Location (City, Neighborhood, ZIP)">
+                    <select name="type">
+                        <option value="">All Types</option>
+                        <option value="house">House</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="condo">Condo</option>
+                        <option value="commercial">Commercial</option>
+                    </select>
+                    <select name="price">
+                        <option value="">Any Price</option>
+                        <option value="100k">Under $200,000</option>
+                        <option value="200k">$200,000 - $500,000</option>
+                        <option value="300k">$500,000+</option>
+                        <option value="rent1">Under $2,000/month</option>
+                        <option value="rent2">$2,000 - $5,000/month</option>
+                        <option value="rent3">$5,000+/month</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
             </div>
         </div>
     </section>
@@ -62,22 +73,64 @@
     <!-- Listings Grid -->
     <section class="listings-grid">
         <div class="container">
-            <div class="properties-grid">
-                <!-- Property cards will be added dynamically with JavaScript -->
+            <div class="filter-options">
+                <span>Sort by:</span>
+                <select id="sort-by">
+                    <option value="default">Default</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">Newest Listings</option>
+                </select>
             </div>
+            
+            <div class="properties-grid">
+                <!-- Properties will be loaded here via JavaScript -->
+            </div>
+            
             <div class="pagination">
-                <button class="btn btn-outline">Previous</button>
-                <button class="active">1</button>
-                <button>2</button>
-                <button>3</button>
-                <button class="btn btn-outline">Next</button>
+                <button class="btn btn-outline" id="prev-page">Previous</button>
+                <div class="page-numbers" id="page-numbers">
+                    <!-- Page numbers will be injected here -->
+                </div>
+                <button class="btn btn-outline" id="next-page">Next</button>
             </div>
         </div>
     </section>
 
-    <!-- Footer (same as index.html) -->
+    <!-- Footer -->
     <footer class="footer">
-        <!-- Copy from index.html -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PrimeHomes</h3>
+                    <p>Helping you find your dream home since 2010.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listings.html">Properties</a></li>
+                        <li><a href="#">Agents</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Real Estate Ave, New York</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@primehomes.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 PrimeHomes. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>

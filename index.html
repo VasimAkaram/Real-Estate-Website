@@ -37,27 +37,31 @@
                 <!-- Search Bar -->
                 <div class="search-bar">
                     <div class="search-tabs">
-                        <button class="active">Buy</button>
-                        <button>Rent</button>
-                        <button>Commercial</button>
+                      <button class="active" data-purpose="buy">Buy</button>
+                      <button data-purpose="rent">Rent</button>
+                      <button data-purpose="commercial">Commercial</button>
                     </div>
-                    <div class="search-fields">
-                        <input type="text" placeholder="Location (City, Neighborhood, ZIP)">
-                        <select>
-                            <option value="">Property Type</option>
-                            <option value="house">House</option>
-                            <option value="apartment">Apartment</option>
-                            <option value="condo">Condo</option>
-                        </select>
-                        <select>
-                            <option value="">Price Range</option>
-                            <option value="100k">$100,000 - $200,000</option>
-                            <option value="200k">$200,000 - $300,000</option>
-                            <option value="300k">$300,000+</option>
-                        </select>
-                        <button class="btn btn-primary">Search</button>
-                    </div>
-                </div>
+                    <form class="search-fields">
+                      <input type="text" name="location" placeholder="Location (City, Neighborhood, ZIP)">
+                      <select name="type">
+                        <option value="">Property Type</option>
+                        <option value="house">House</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="condo">Condo</option>
+                        <option value="commercial">Commercial</option>
+                      </select>
+                      <select name="price">
+                        <option value="">Price Range</option>
+                        <option value="100k">Under $200,000</option>
+                        <option value="200k">$200,000 - $500,000</option>
+                        <option value="300k">$500,000+</option>
+                        <option value="rent1">Under $2,000/month</option>
+                        <option value="rent2">$2,000 - $5,000/month</option>
+                        <option value="rent3">$5,000+/month</option>
+                      </select>
+                      <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+                  </div>
             </div>
         </div>
     </section>
