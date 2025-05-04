@@ -436,7 +436,7 @@ img {
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 120px 0 60px;
+    padding: 200px 0 100px;
     text-align: center;
 }
 
@@ -455,7 +455,7 @@ img {
 }
 
 .breadcrumb a:hover {
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .breadcrumb span {
@@ -882,13 +882,25 @@ img {
   
   /* Make search fields stack vertically on mobile */
   @media (max-width: 768px) {
-    .search-fields {
-      flex-direction: column;
+    .listings-header {
+        padding: 100px 0 50px;
     }
     
-    .search-fields input,
-    .search-fields select,
-    .search-fields button {
-      width: 100%;
+    .listings-header .main-title {
+        font-size: 2.5rem;
     }
-  }
+    
+    .listings-header .subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .listings-header .main-title {
+        font-size: 2rem;
+    }
+    
+    .listings-header .subtitle {
+        font-size: 1rem;
+    }
+}
