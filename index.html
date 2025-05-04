@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeHomes | Find Your Dream Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Prime<span>Homes</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="listings.html">Listings</a>
+                <a href="#">Agents</a>
+                <a href="#">About</a>
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+            <button class="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find Your Perfect Home</h1>
+                <p>Discover properties that match your lifestyle and budget</p>
+                
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <div class="search-tabs">
+                        <button class="active">Buy</button>
+                        <button>Rent</button>
+                        <button>Commercial</button>
+                    </div>
+                    <div class="search-fields">
+                        <input type="text" placeholder="Location (City, Neighborhood, ZIP)">
+                        <select>
+                            <option value="">Property Type</option>
+                            <option value="house">House</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="condo">Condo</option>
+                        </select>
+                        <select>
+                            <option value="">Price Range</option>
+                            <option value="100k">$100,000 - $200,000</option>
+                            <option value="200k">$200,000 - $300,000</option>
+                            <option value="300k">$300,000+</option>
+                        </select>
+                        <button class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="featured">
+        <div class="container">
+            <h2 class="section-title">Featured Properties</h2>
+            <div class="properties-grid">
+                <!-- Property cards will be added dynamically with JavaScript -->
+            </div>
+            <a href="listings.html" class="btn btn-outline">View All Properties</a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose PrimeHomes</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-home"></i>
+                    <h3>Wide Selection</h3>
+                    <p>Thousands of properties across the country</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Market Insights</h3>
+                    <p>Get the latest market trends and data</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Our team is always ready to assist you</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PrimeHomes</h3>
+                    <p>Helping you find your dream home since 2010.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listings.html">Properties</a></li>
+                        <li><a href="#">Agents</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Alam Bagh Lucknow, India</p>
+                    <p><i class="fas fa-phone"></i> +91 9808808177</p>
+                    <p><i class="fas fa-envelope"></i> info@primehomes.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 PrimeHomes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
